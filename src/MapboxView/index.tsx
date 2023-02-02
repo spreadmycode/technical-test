@@ -181,7 +181,7 @@ const MapboxView = () => {
           ref={fileRef}
           type="file"
           style={{ display: "none" }}
-          accept=".json"
+          accept=".geojson"
           onChange={(e) => onPlotUpload(e.target.files![0])}
         />
         <Button variant="contained" onClick={() => onOpenFile()}>
