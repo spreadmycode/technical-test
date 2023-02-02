@@ -178,9 +178,10 @@ const MapboxView = () => {
         }}
       >
         <input
+          id="file-input"
           ref={fileRef}
           type="file"
-          style={{ display: "none" }}
+          style={{ visibility: "hidden" }}
           accept=".geojson"
           onChange={(e) => onPlotUpload(e.target.files![0])}
         />
@@ -197,6 +198,7 @@ const MapboxView = () => {
             lot coverage %: {buildingProperties.floorArea}
           </Typography>
           <Slider
+            id="floor-area-slider"
             value={buildingProperties.floorArea}
             min={0}
             max={100}
@@ -209,6 +211,7 @@ const MapboxView = () => {
             floor number: {buildingProperties.numberOfFloors}
           </Typography>
           <Slider
+            id="number-of-floors-slider"
             value={buildingProperties.numberOfFloors}
             min={0}
             max={100}
@@ -223,6 +226,7 @@ const MapboxView = () => {
             floor height: {buildingProperties.heightPerFloor}
           </Typography>
           <Slider
+            id="height-per-floor-slider"
             value={buildingProperties.heightPerFloor}
             min={0}
             max={100}
